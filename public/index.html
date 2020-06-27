@@ -37,7 +37,7 @@
                 <button type="submit" class="btn btn-default" ng-click="login()">Login</button>
             </div>
         </div>
-        <div ng-show="user">
+        <div class="user-container" ng-show="user">
             <img src="{{user.profilePic}}"/>
             <h1>Welcome {{user.name}}</h1>
             <a href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
