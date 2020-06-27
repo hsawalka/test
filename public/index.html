@@ -41,10 +41,16 @@
             <img class="user-img" src="{{user.profilePic}}"/>
             <h1>Welcome {{user.name}}</h1>
             <a href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
+            <div ng-show="errorMessage" class="alert alert-warning">
+                {{errorMessage}}
+            </div>
             <div ng-show="newPasswordMode">
                 <label for="newPassword">New Password</label>
                 <input type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
-                <button>Change</button>
+                <button type="submit" class="btn btn-default" ng-click="changePass()">Change</button>
+            </div>
+            <div class="alert alert-success" ng-show="passwordChanged">
+                Successfully changed your password, don't refresh the page!
             </div>
         </div>
     </div>

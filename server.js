@@ -23,7 +23,7 @@ const email = '123@123.123';
 const password = '123123';
 
 app.post('/api/login', function(req, res) {
-    if(req.body && req.body.email && req.body.password){
+    if(req.body && req.body.email && req.body.password) {
         if(req.body.email == email) {
             if(req.body.password == password) {
                 var user = {
@@ -43,6 +43,20 @@ app.post('/api/login', function(req, res) {
     }
     else {
         res.send(422,{message:'yo! you miss`n some stuff!'});
+    }
+});
+
+app.post('/api/change-pass', function(req, res) {
+    if(req.body && req.body.password) {
+        var user = {
+            name: 'Alex Jones',
+            email: req.body.email,
+            password: req.body.password,
+            profilePic: 'http://lorempixel.com/500/500/people/',
+        };
+        res.send(200, user);
+    } else {
+        res.send(400, { message:'Write down a new password you idiot' });
     }
 });
 
