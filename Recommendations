@@ -4,7 +4,7 @@ This is a list of recommendations to make this project better
 
 // Please make your recommendations as clear as possible with only a few sentences 
 
-1. Login error message is wrong
+1. Login error message is wrong (not really).
 
 2. Login email and password should not be hardcoded
 
@@ -18,3 +18,5 @@ This is a list of recommendations to make this project better
 existing HTML validation attributes before making any requests.
 
 7. Make change password button work.
+
+8. Since this is not a realistic project there is no further editing I would do unless I had the time to rewrite all of it.
