@@ -46,6 +46,7 @@ app.post('/api/login', function(req, res) {
     }
 });
 
+// Request to change password
 app.post('/api/change-pass', function(req, res) {
     if(req.body && req.body.password) {
         var user = {

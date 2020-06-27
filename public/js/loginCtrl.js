@@ -8,6 +8,7 @@ loginApp.controller('loginCtrl', ['$scope', '$http', ($scope, $http) => {
         });
     }
 
+    // Function for changing the password
     $scope.changePass = () => {
         $http.post('/api/change-pass', { password: $scope.newPassword }).then(res => {
             $scope.user = res.data;
