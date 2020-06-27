@@ -16,3 +16,5 @@ This is a list of recommendations to make this project better
 
 6. Initial validation should happen in the front-end, should be remodeled in order to take advantage of the 
 existing HTML validation attributes before making any requests.
+
+7. Make change password button work.
