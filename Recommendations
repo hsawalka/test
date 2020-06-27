@@ -13,3 +13,5 @@ This is a list of recommendations to make this project better
 4. Code should be written ccording to best style practices
 
 5. Login box should have a margin-top
+
+6. Initial validation should happen in the front-end
