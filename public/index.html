@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="user-container" ng-show="user">
-            <img src="{{user.profilePic}}"/>
+            <img class="user-img" src="{{user.profilePic}}"/>
             <h1>Welcome {{user.name}}</h1>
             <a href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
             <div ng-show="newPasswordMode">

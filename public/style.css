@@ -5,3 +5,7 @@
 .user-container {
     margin-top: 20px;
 }
+
+.user-container .user-img {
+    width: 200px;
+}
