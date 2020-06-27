@@ -3,6 +3,7 @@ loginApp.controller('loginCtrl', ['$scope', '$http', ($scope, $http) => {
     $scope.login = () => {
         $http.post('/api/login', { email: $scope.email , password: $scope.password }).then(res => {
             $scope.user = res.data;
+            $scope.errorMessage = undefined;
         }, err => {
             $scope.errorMessage = err.data.message;
         });
@@ -10,6 +11,7 @@ loginApp.controller('loginCtrl', ['$scope', '$http', ($scope, $http) => {
 
     // Function for changing the password
     $scope.changePass = () => {
+        $scope.errorMessage = undefined;
         $http.post('/api/change-pass', { password: $scope.newPassword }).then(res => {
             $scope.user = res.data;
             $scope.newPasswordMode = false;

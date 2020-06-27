@@ -49,13 +49,17 @@ app.post('/api/login', function(req, res) {
 // Request to change password
 app.post('/api/change-pass', function(req, res) {
     if(req.body && req.body.password) {
-        var user = {
-            name: 'Alex Jones',
-            email: req.body.email,
-            password: req.body.password,
-            profilePic: 'http://lorempixel.com/500/500/people/',
-        };
-        res.send(200, user);
+        if(req.body.password.length >= 8) {
+            var user = {
+                name: 'Alex Jones',
+                email: req.body.email,
+                password: req.body.password,
+                profilePic: 'http://lorempixel.com/500/500/people/',
+            };
+            res.send(200, user);
+        } else {
+            res.send(400, { message:'Make your password longer you lazy ass' });
+        }
     } else {
         res.send(400, { message:'Write down a new password you idiot' });
     }
