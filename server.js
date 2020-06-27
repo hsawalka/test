@@ -16,14 +16,18 @@ app.use('api/*',req=>{
     next();
 });
 
-
+/*
+Obviously email and password should come from a data base, but for now we're gonna put them in variables.
+*/
+const email = '123@123.123';
+const password = '123123';
 
 app.post('/api/login', function (req, res) {
 
     if(req.body && req.body.email && req.body.password){
-        if(req.body.email == '123@123.123'){
+        if(req.body.email == email){
 
-            if(req.body.password == '123123') {
+            if(req.body.password == password) {
                 var user ={
                     name:"Alex Jones"
                     , email:req.body.email
