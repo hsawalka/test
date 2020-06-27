@@ -4,10 +4,10 @@ This is a list of recommendations to make this project better
 
 // Please make your recommendations as clear as possible with only a few sentences 
 
-1.
+1. Login error message is wrong
 
-2.
+2. Login email and password should not be hardcoded
 
-3.
+3. No signup option
 
-4.
+4. Code should be written ccording to best style practices
